@@ -30,14 +30,12 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class task2 {
-    // Получаем первое слово из строки (Имя)
     private static String getFirstWord(String sentence) {
         String delimiter = " ";
         String[] words = sentence.split(delimiter);
         return words[0];
     }
 
-    // Сортируем карту по значениям в порядке убывания
     public static <N, S extends Comparable<S>> Map<N, S> sortByValues(final Map<N, S> map) {
         Comparator<N> valueComparator = new Comparator<N>() {
             public int compare(N k1, N k2) {
